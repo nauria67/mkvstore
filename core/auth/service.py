@@ -1,11 +1,12 @@
 import datetime
+import os
 
 import jwt
 
 from core.auth.repository import AuthRepository
 
-SECRET_KEY = "b5f18f7c229c4312a8cb6e6d6adf2b8d6c8932a4df93a1e46b382a33bafcc731"
-JWT_ALGORITHM = "HS256"
+SECRET_KEY = os.getenv("SECRET_KEY")
+JWT_ALGORITHM = os.getenv("JWT_ALGORITHM")
 ACCESS_TOKEN_EXP_MINUTES = 30
 REFRESH_TOKEN_EXP_DAYS = 7
 
