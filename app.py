@@ -1,10 +1,13 @@
 from flask import Flask
 
 from core.auth.controller import blueprint as auth_blueprint
+from core.key.controller import blueprint as key_blueprint
 from db.redis_client import RedisDB
 
 app = Flask(__name__)
 app.register_blueprint(auth_blueprint, url_prefix="/auth")
+app.register_blueprint(key_blueprint, url_prefix="/key")
+
 
 if __name__ == "__main__":
     redis_db = RedisDB()
