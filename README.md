@@ -36,6 +36,8 @@ Before you begin, ensure you have the following installed:
 
 2.  **Run the Flask application:**
     ```bash
+    rename .env.example to .env
+    
     python3.10 app.py
     ```
 

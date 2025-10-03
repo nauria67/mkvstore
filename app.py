@@ -11,7 +11,7 @@ app.register_blueprint(key_blueprint, url_prefix="/key")
 
 if __name__ == "__main__":
     redis_db = RedisDB()
-
+    redis_db.connect()
     # Preload tenant data
     initial_data = {
         "user_tenant1": {"tenant_id": "101", "password": "pass101"},
